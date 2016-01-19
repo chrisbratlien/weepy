@@ -1,0 +1,13 @@
+1) copy local.php.sample to local.php
+
+2) copy .htaccess.sample to .htaccess
+
+3) put 3rd party JavaScript and CSS in the lib folder.
+
+4) put your original javascript in js folder
+
+5) start putting your 3rd-party style includes in header.php
+
+6) start putting your JavaScript includes in footer.php
+
+

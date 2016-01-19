@@ -1,0 +1,18 @@
+<?php 
+
+// error_reporting(E_ALL); //comment this out if production
+// ini_set('display_errors',1); //comment this out if production
+
+function get_bloginfo($param) {
+  if ($param == 'url') {
+    return 'http://localhost';
+  }
+  else if ($param == 'template_url'){
+    return 'http://localhost';  
+  }
+  return '';
+}
+
+function base_uri() {
+  return clean_uri('/');  
+}
