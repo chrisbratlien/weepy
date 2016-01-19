@@ -39,10 +39,21 @@ function route($uri) {
   /////pp('path: ' . $path);
   //pp('dirname: ' . dirname(__FILE__));
   
+  $path = ltrim($path,'/');
+  
   $tests = Array();  
+  array_push($tests,sprintf('%s/%s/index.php',dirname(__FILE__),$path));
+  array_push($tests,sprintf('%s/page-%s.php',dirname(__FILE__),$path));
+  array_push($tests,sprintf('%s/%s.php',dirname(__FILE__),$path));
+  
+  
+  /**  
   $tests[] = dirname(__FILE__) . $path . '/index.php';
   $tests[] = dirname(__FILE__) . $path . '.php';
-
+  $tests[] = dirname(__FILE__) . $path . '.php';
+  ***/
+  
+  
   foreach($tests as $test) {
   
     //print_r($test);
