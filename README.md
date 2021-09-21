@@ -1,19 +1,21 @@
 # Weepy
 
-Weepy is a small PHP framework which borrows some idioms from WordPress such as:
+Weepy is a small PHP framework that can host your website on its own, yet also convert into a WordPress theme later on. Weepy implements these functions familiar to a WordPress theme developer:
 
-add_action
-do_action
-add_filter
+add_action  
+do_action  
+add_filter  
 apply_filters
 
-get_header
+get_header  
 get_footer
 
-Some files are also organized in a style similar to a WordPress theme:
+body_class
 
-functions.php
-header.php
+Familiar files:
+
+functions.php  
+header.php  
 footer.php
 
 ## Getting Started (local development)
