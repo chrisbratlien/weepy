@@ -20,14 +20,16 @@ footer.php
 
 ## Getting Started (local development)
 
-1. Copy .htaccess.sample to .htaccess Edit the RewriteBase line to be / or /yoursubfolder
+1. Copy .htaccess.sample to .htaccess and edit the `RewriteBase` line to be / or /yoursubfolder if you're hosting in a subfolder.
+
+`cp .htaccess.sample .htaccess`
 
 2. Copy .env.sample to .env and customize `APACHE_PORT` and `TIMEZONE`
    `cp .env.sample .env`
 
 The `APACHE_PORT` is only needed if you use the included `docker-compose.yml`
 
-3. start Docker
+3. Start the container
 
 ```
 docker-compose up
@@ -35,7 +37,7 @@ docker-compose up
 
 In production, you may need another way to set environment variables. This depends on where you host the app.
 
-With Azure App services, for example, you can go to https://portal.azure.com, browse to your App Service > Settings > Configuration > Application Settings
+For example, with Azure App services, you can go to https://portal.azure.com, browse to your App Service > Settings > Configuration > Application Settings
 
 Or, you could also add a line to your `functions.php`:
 
