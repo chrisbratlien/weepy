@@ -22,10 +22,15 @@ footer.php
 
 1. Copy .htaccess.sample to .htaccess and edit the `RewriteBase` line to be / or /yoursubfolder if you're hosting in a subfolder.
 
-`cp .htaccess.sample .htaccess`
+```
+cp .htaccess.sample .htaccess
+```
 
 2. Copy .env.sample to .env and customize `APACHE_PORT` and `TIMEZONE`
-   `cp .env.sample .env`
+
+```
+cp .env.sample .env
+```
 
 The `APACHE_PORT` is only needed if you use the included `docker-compose.yml`
 
@@ -41,13 +46,13 @@ For example, with Azure App services, you can go to https://portal.azure.com, br
 
 Or, you could also add a line to your `functions.php`:
 
-```
+```php
 require_once('local.php');
 ```
 
 and inside `local.php` put your environment settings:
 
-```
+```php
 <?php
 putenv('TIMEZONE=US/Central');
 ```
